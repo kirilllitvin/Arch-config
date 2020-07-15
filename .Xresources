@@ -1,0 +1,73 @@
+!font
+xterm*faceName: Ubuntu Mono Regular
+xterm*faceSize: 10 
+xterm*renderFont: true
+!xterm*background: Black
+!xterm*foreground: grey
+
+!copy and past 
+xterm*VT100.Translations: #override \
+    Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+    Ctrl <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY) 
+
+!Scrolling 
+! Lines of output that you can scroll back over
+xterm*saveLines: 4096
+! Turn the scrollbar on, and put it on the right
+xterm*scrollBar: true
+xterm*rightScrollBar: true
+
+! Do not scroll when there is new input e.g. tail -f /var/syslog
+xterm*scrollTtyOutput: false
+
+
+!Nord
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
+
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
+
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
+
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
